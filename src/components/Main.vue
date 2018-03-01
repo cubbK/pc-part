@@ -7,8 +7,8 @@
         <img src="./main/mushrooms.png" alt="" class="pizza-topping">
         <img src="./main/olives.png" alt="" class="pizza-topping">
       </div>
-      <hr class="golden">
       <div class="pizza-options">
+        <hr class="golden">
         <div class="pizza-type">
           <div class="pizza-type-label">
             Type
@@ -33,6 +33,7 @@
           </div>
 
         </div>
+        <hr class="golden">
         <div class="order-price-container">
           <div class="price">
             12 <img src="./main/gold/1.png" alt="">
