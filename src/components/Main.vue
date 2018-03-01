@@ -10,17 +10,32 @@
       <hr class="golden">
       <div class="pizza-options">
         <div class="pizza-type">
-        <div class="pizza-type-label">
-          Type
+          <div class="pizza-type-label">
+            Type
+          </div>
+          <select class="rpgui-dropdown">
+            <option value="option1">Neapolitana</option>
+            <option value="option2">option2</option>
+          </select>
         </div>
-        <select class="rpgui-dropdown">
-          <option value="option1">Neapolitana</option>
-          <option value="option2">option2</option>
-        </select>
-      </div>
-      <div class="order">
-        <button class="rpgui-button" type="button"><p>Order</p></button>
-      </div>
+        <div class="pizza-toppings">
+          <div class="title">
+            Toppings
+          </div>
+          <div class="checkbox">
+             <input class="rpgui-checkbox" type="checkbox"><label>Mooshrooms</label>
+          </div>
+          <div class="checkbox">
+             <input class="rpgui-checkbox" type="checkbox"><label>Lettuce</label>
+          </div>
+          <div class="checkbox">
+             <input class="rpgui-checkbox" type="checkbox"><label>Olives</label>
+          </div>
+
+        </div>
+        <div class="order">
+          <button class="rpgui-button golden" type="button"><p>Order</p></button>
+        </div>
       </div>
 
     </div>
@@ -64,6 +79,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
+
+}
+
+.pizza-toppings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pizza-toppings .title{
+  padding-top: 10px;
 }
 </style>
