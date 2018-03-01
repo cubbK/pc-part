@@ -33,9 +33,15 @@
           </div>
 
         </div>
-        <div class="order">
-          <button class="rpgui-button golden" type="button"><p>Order</p></button>
+        <div class="order-price-container">
+          <div class="price">
+            12 <img src="./main/gold/1.png" alt="">
+          </div>
+          <div class="order">
+            <button class="rpgui-button golden" type="button"><p>Order</p></button>
+          </div>
         </div>
+
       </div>
 
     </div>
@@ -90,5 +96,28 @@
 
 .pizza-toppings .title{
   padding-top: 10px;
+}
+
+.order-price-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.price img {
+  width: 50px;
+  height: 50px;
+}
+
+.order {
+  flex-grow: 1;
+}
+
+.order button {
+  width: 90%;
 }
 </style>
