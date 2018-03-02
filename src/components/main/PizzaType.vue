@@ -16,7 +16,6 @@ export default {
 }
 </script>
 
-
 <style scoped>
 .pizza-type {
   display: flex;
@@ -30,4 +29,3 @@ export default {
   justify-content: center;
 }
 </style>
-

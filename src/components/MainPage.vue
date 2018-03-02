@@ -5,21 +5,7 @@
       <div class="pizza-options">
         <hr class="golden">
         <pizza-type></pizza-type>
-        <div class="pizza-toppings">
-          <div class="title">
-            Toppings
-          </div>
-          <div class="checkbox">
-             <input class="rpgui-checkbox" type="checkbox"><label>Mooshrooms</label>
-          </div>
-          <div class="checkbox">
-             <input class="rpgui-checkbox" type="checkbox"><label>Lettuce</label>
-          </div>
-          <div class="checkbox">
-             <input class="rpgui-checkbox" type="checkbox"><label>Olives</label>
-          </div>
-
-        </div>
+        <toppings-list></toppings-list>
         <hr class="golden">
         <div class="order-price-container">
           <div class="price">
@@ -39,12 +25,14 @@
 <script>
 import PizzaItem from './main/PizzaItem.vue'
 import PizzaType from './main/pizzaType.vue'
+import ToppingsList from './main/ToppingsList.vue'
 
 export default {
   name: 'MainPage',
   components: {
     'pizza-item': PizzaItem,
-    'pizza-type': PizzaType
+    'pizza-type': PizzaType,
+    'toppings-list': ToppingsList
   }
 }
 </script>
@@ -58,16 +46,6 @@ export default {
 
 .pizza-options {
   padding: 0 10px;
-}
-
-.pizza-toppings {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.pizza-toppings .title{
-  padding-top: 10px;
 }
 
 .order-price-container {
