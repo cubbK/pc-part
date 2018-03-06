@@ -4,20 +4,31 @@
       Toppings
     </div>
     <div class="checkbox">
-      <input class="rpgui-checkbox" type="checkbox"><label>Mooshrooms</label>
+      <!-- Does not work when in new line -->
+      <input class="rpgui-checkbox" type="checkbox"><label v-on:click="toggleTopping('mushrooms')">Mooshrooms</label>
     </div>
-    <div class="checkbox">
-      <input class="rpgui-checkbox" type="checkbox"><label>Lettuce</label>
+    <div class="checkbox" >
+      <!-- Does not work when in new line -->
+      <input class="rpgui-checkbox" type="checkbox"><label v-on:click="toggleTopping('lettuce')">Lettuce</label>
     </div>
-    <div class="checkbox">
-      <input class="rpgui-checkbox" type="checkbox"><label>Olives</label>
+    <div class="checkbox" >
+      <!-- Does not work when in new line -->
+      <input class="rpgui-checkbox" type="checkbox"><label v-on:click="toggleTopping('olives')">Olives</label>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ToppingsList'
+  name: 'ToppingsList',
+  methods: {
+    toggleTopping: function (topping) {
+      this.$store.commit({
+        type: 'toggleTopping',
+        topping
+      })
+    }
+  }
 }
 </script>
 

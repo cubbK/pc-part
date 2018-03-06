@@ -2,11 +2,15 @@ import Vuex from 'vuex'
 
 const store = new Vuex.Store({
   state: {
-    count: 0
+    toppings: {
+      mushrooms: false,
+      lettuce: false,
+      olives: false
+    }
   },
   mutations: {
-    increment (state) {
-      state.count++
+    toggleTopping (state, payload) {
+      state.toppings[payload.topping] = !state.toppings[payload.topping]
     }
   }
 })
