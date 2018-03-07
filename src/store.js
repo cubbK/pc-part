@@ -6,6 +6,10 @@ const store = new Vuex.Store({
       mushrooms: false,
       lettuce: false,
       olives: false
+    },
+    pizzas: {
+      types: ['Sicilian', 'California', 'Neapolitan'],
+      activePizza: 'Sicilian'
     }
   },
   mutations: {

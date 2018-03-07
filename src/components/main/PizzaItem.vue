@@ -4,6 +4,7 @@
     <img v-if="lettuce" src="./pizzaItem/lettuce.png" alt="" class="pizza-topping">
     <img v-if="mushrooms" src="./pizzaItem/mushrooms.png" alt="" class="pizza-topping">
     <img v-if="olives" src="./pizzaItem/olives.png" alt="" class="pizza-topping">
+    {{ activePizza }}
   </div>
 </template>
 
@@ -16,8 +17,8 @@ export default {
     // arrow functions can make the code very succinct!
     lettuce: state => state.toppings.lettuce,
     mushrooms: state => state.toppings.mushrooms,
-    olives: state => state.toppings.olives
-
+    olives: state => state.toppings.olives,
+    activePizza: state => state.pizzas.activePizza
   })
 }
 </script>
