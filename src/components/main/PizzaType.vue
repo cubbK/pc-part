@@ -7,10 +7,10 @@
       <select v-on:change="setActivePizza($event)">
         <option
           v-for="pizza in $store.state.pizzas.types"
-          v-bind:value="pizza"
-          v-bind:key="pizza"
+          v-bind:value="pizza.label"
+          v-bind:key="pizza.label"
         >
-          {{ pizza }}
+          {{ pizza.label + ' ' + pizza.price + '$' }}
         </option>
       </select>
     </div>

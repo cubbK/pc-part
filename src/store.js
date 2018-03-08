@@ -7,8 +7,20 @@ const store = new Vuex.Store({
       lettuce: false,
       olives: false
     },
+    toppingPrice: 2,
     pizzas: {
-      types: ['Sicilian', 'California', 'Neapolitan'],
+      types: [{
+        label: 'Sicilian',
+        price: 15
+      },
+      {
+        label: 'California',
+        price: 19
+      },
+      {
+        label: 'Neapolitan',
+        price: 23
+      }],
       activePizza: 'Sicilian'
     }
   },
