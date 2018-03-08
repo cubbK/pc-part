@@ -37,6 +37,7 @@ export default {
 
 <style scoped>
   .pizza-type {
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-content: center;

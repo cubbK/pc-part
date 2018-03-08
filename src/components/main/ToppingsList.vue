@@ -5,7 +5,7 @@
     </div>
     <div class="checkbox">
       <!-- Does not work when in new line -->
-      <input class="rpgui-checkbox" type="checkbox"><label v-on:click="toggleTopping('mushrooms')">Mooshrooms</label>
+      <input class="rpgui-checkbox" type="checkbox"><label v-on:click="toggleTopping('mushrooms')">Mushrooms</label>
     </div>
     <div class="checkbox" >
       <!-- Does not work when in new line -->

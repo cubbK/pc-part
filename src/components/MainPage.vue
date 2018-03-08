@@ -5,6 +5,7 @@
       <div class="pizza-options">
         <hr class="golden">
         <pizza-type></pizza-type>
+        <pizza-size></pizza-size>
         <toppings-list></toppings-list>
         <hr class="golden">
         <div class="order-price-container">
@@ -26,13 +27,15 @@
 import PizzaItem from './main/PizzaItem.vue'
 import PizzaType from './main/pizzaType.vue'
 import ToppingsList from './main/ToppingsList.vue'
+import PizzaSize from './main/PizzaSize.vue'
 
 export default {
   name: 'MainPage',
   components: {
     'pizza-item': PizzaItem,
     'pizza-type': PizzaType,
-    'toppings-list': ToppingsList
+    'toppings-list': ToppingsList,
+    'pizza-size': PizzaSize
   }
 }
 </script>
