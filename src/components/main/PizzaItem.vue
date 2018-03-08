@@ -1,10 +1,11 @@
 <template>
   <div class="pizza">
-    <img src="./pizzaItem//pizza1-pixelated.png" alt="">
+    <img v-if="activePizza === 'Sicilian'" src="./pizzaItem//pizza1-pixelated.png" alt="">
+    <img v-if="activePizza ==='Neapolitan'" src="./pizzaItem//pizza2-pixelated.png" alt="">
+    <img v-if="activePizza ==='California'" src="./pizzaItem//pizza3-pixelated.png" alt="">
     <img v-if="lettuce" src="./pizzaItem/lettuce.png" alt="" class="pizza-topping">
     <img v-if="mushrooms" src="./pizzaItem/mushrooms.png" alt="" class="pizza-topping">
     <img v-if="olives" src="./pizzaItem/olives.png" alt="" class="pizza-topping">
-    {{ activePizza }}
   </div>
 </template>
 
