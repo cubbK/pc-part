@@ -15,6 +15,9 @@ const store = new Vuex.Store({
   mutations: {
     toggleTopping (state, payload) {
       state.toppings[payload.topping] = !state.toppings[payload.topping]
+    },
+    setActivePizza (state, payload) {
+      state.pizzas.activePizza = payload.activePizza
     }
   }
 })

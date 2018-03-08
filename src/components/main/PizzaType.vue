@@ -4,16 +4,15 @@
       Type
     </div>
     <div>
-      <select class="rpgui-dropdown" ref="pizzaDropdown">
+      <select v-on:change="setActivePizza($event)">
         <option
           v-for="pizza in $store.state.pizzas.types"
+          v-bind:value="pizza"
           v-bind:key="pizza"
-          v-on:click="setActivePizza(pizza)"
         >
-          {{ pizza + '12' }}
+          {{ pizza }}
         </option>
       </select>
-      {{ test() }}
     </div>
   </div>
 </template>
@@ -25,13 +24,12 @@ export default {
     selected: 'option1'
   }),
   methods: {
-    setActivePizza: function (pizza) {
-      console.log('triggered')
-    },
-    test: function () {
-      const pizzaDropdown = this.$refs.pizzaDropdown
-      console.log(pizzaDropdown)
-      console.log(this.$refs)
+    setActivePizza: function (event) {
+      const activePizza = event.target.value
+      this.$store.commit({
+        type: 'setActivePizza',
+        activePizza
+      })
     }
   }
 }
