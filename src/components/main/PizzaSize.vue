@@ -5,9 +5,14 @@
     </div>
     <div>
       <select>
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="huge">Huge</option>
+        <option
+          v-for="size in $store.state.sizes"
+          v-bind:key="size.label"
+          value="small"
+        >
+          {{ size.label | capitalize }} {{ getPrice(size.price) }}
+        </option>
+
       </select>
     </div>
   </div>
@@ -15,7 +20,17 @@
 
 <script>
 export default {
-  name: 'PizzaSize'
+  name: 'PizzaSize',
+  methods: {
+    getPrice (price) {
+      return price < 0 ? `${price}$` : `+${price}$`
+    }
+  },
+  filters: {
+    capitalize: function (string) {
+      return string.charAt(0).toUpperCase() + string.slice(1)
+    }
+  }
 }
 </script>
 
