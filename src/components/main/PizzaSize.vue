@@ -4,11 +4,11 @@
       Size
     </div>
     <div>
-      <select>
+      <select v-on:change="setActiveSize($event)">
         <option
           v-for="size in $store.state.sizes"
           v-bind:key="size.label"
-          value="small"
+          v-bind:value="size.label"
         >
           {{ size.label | capitalize }} {{ getPrice(size.price) }}
         </option>
@@ -24,6 +24,13 @@ export default {
   methods: {
     getPrice (price) {
       return price < 0 ? `${price}$` : `+${price}$`
+    },
+    setActiveSize (event) {
+      const value = event.target.value
+      this.$store.commit({
+        type: 'setActiveSize',
+        activeSize: value
+      })
     }
   },
   filters: {

@@ -7,6 +7,7 @@ const store = new Vuex.Store({
       lettuce: false,
       olives: false
     },
+    activeSize: 'small',
     sizes: [
       {
         label: 'small',
@@ -44,6 +45,9 @@ const store = new Vuex.Store({
     },
     setActivePizza (state, payload) {
       state.pizzas.activePizza = payload.activePizza
+    },
+    setActiveSize (state, payload) {
+      state.activeSize = payload.activeSize
     }
   }
 })

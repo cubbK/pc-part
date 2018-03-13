@@ -8,17 +8,8 @@
         <pizza-size></pizza-size>
         <toppings-list></toppings-list>
         <hr class="golden">
-        <div class="order-price-container">
-          <div class="price">
-            12 <img src="./main/gold/1.png" alt="">
-          </div>
-          <div class="order">
-            <button class="rpgui-button golden" type="button"><p>Order</p></button>
-          </div>
-        </div>
-
+        <pizza-bottom></pizza-bottom>
       </div>
-
     </div>
   </div>
 </template>
@@ -28,6 +19,7 @@ import PizzaItem from './main/PizzaItem.vue'
 import PizzaType from './main/pizzaType.vue'
 import ToppingsList from './main/ToppingsList.vue'
 import PizzaSize from './main/PizzaSize.vue'
+import PizzaBottom from './main/PizzaBottom.vue'
 
 export default {
   name: 'MainPage',
@@ -35,12 +27,17 @@ export default {
     'pizza-item': PizzaItem,
     'pizza-type': PizzaType,
     'toppings-list': ToppingsList,
-    'pizza-size': PizzaSize
+    'pizza-size': PizzaSize,
+    'pizza-bottom': PizzaBottom
   }
 }
 </script>
 
 <style scoped>
+.main-content {
+  width: 600px;
+}
+
 .pizza-container {
   padding-top: 0;
   padding-left: 0;
@@ -51,26 +48,4 @@ export default {
   padding: 0 10px;
 }
 
-.order-price-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.price {
-  display: flex;
-  align-items: center;
-}
-
-.price img {
-  width: 50px;
-  height: 50px;
-}
-
-.order {
-  flex-grow: 1;
-}
-
-.order button {
-  width: 90%;
-}
 </style>

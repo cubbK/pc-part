@@ -23,4 +23,7 @@ body {
   margin: 0;
   background-color: #2c3e50;
 }
+.rpgui-content, .rpgui-container {
+  position: static !important;
+}
 </style>
