@@ -1,7 +1,10 @@
 <template>
   <div class="order-price-container">
     <div class="price">
-      {{ price }} <img v-bind:src="priceIcon" alt="">
+      {{ price }}
+      <img v-if="price < 20" src="./pizzaBottom/gold/1.png" alt="">
+      <img v-if="price < 25 && price > 20" src="./pizzaBottom/gold/3.png" alt="">
+      <img v-if="price > 25" src="./pizzaBottom/gold/4.png" alt="">
     </div>
     <div class="order">
       <button class="rpgui-button golden" type="button"><p>Order</p></button>
@@ -40,18 +43,6 @@ export default {
       const sizePrice = getSizePrice(state.sizes, state.activeSize)
 
       return pizzaPrice + toppingsPrice + sizePrice
-    },
-    priceIcon: function() {
-      const priceIcons = {
-        small: './pizzaBottom/gold/1.png',
-        medium: './pizzaBottom/gold/3.png',
-        big: './pizzaBottom/gold/4.png'
-      }
-      if (this.price < 20) {
-        return priceIcons.small
-      } else if (this.price < 25) {
-        return priceIcons.medium
-      } else return priceIcons.big
     }
   }
 }
