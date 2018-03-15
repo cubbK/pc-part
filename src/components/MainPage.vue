@@ -34,8 +34,9 @@ export default {
 </script>
 
 <style scoped>
-.main-content {
-  width: 600px;
+.main-container {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .pizza-container {
