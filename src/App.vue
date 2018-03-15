@@ -21,7 +21,7 @@ export default {
 
 body {
   margin: 0;
-  background-color: #2c3e50;
+  background-color: #191919;
 }
 .rpgui-content, .rpgui-container {
   position: static !important;

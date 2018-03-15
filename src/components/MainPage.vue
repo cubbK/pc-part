@@ -1,5 +1,6 @@
 <template>
   <div class="main-container rpgui-content">
+    <h1 class="title">Pizza Ordering</h1>
     <div class="rpgui-container framed pizza-container">
       <pizza-item></pizza-item>
       <div class="pizza-options">
@@ -47,6 +48,10 @@ export default {
 
 .pizza-options {
   padding: 0 10px;
+}
+
+.title {
+  padding-top: 15px;
 }
 
 </style>
